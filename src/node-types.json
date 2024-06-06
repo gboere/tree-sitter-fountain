@@ -1,11 +1,190 @@
 [
   {
-    "type": "source_file",
+    "type": "action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "character",
     "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "description",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "dialogue",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dialogue_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "dialogue",
+          "named": true
+        },
+        {
+          "type": "parenthetical",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "document",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "action",
+          "named": true
+        },
+        {
+          "type": "dialogue_block",
+          "named": true
+        },
+        {
+          "type": "note",
+          "named": true
+        },
+        {
+          "type": "scene_heading",
+          "named": true
+        },
+        {
+          "type": "section_heading",
+          "named": true
+        },
+        {
+          "type": "transition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "line",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "note",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "parenthetical",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scene_heading",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "description",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_heading",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "description",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "transition",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "\n",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "EST.",
+    "named": false
+  },
+  {
+    "type": "EXT.",
+    "named": false
+  },
+  {
+    "type": "INT.",
+    "named": false
+  },
+  {
+    "type": "INT./EXT.",
+    "named": false
+  },
+  {
+    "type": "[[",
+    "named": false
+  },
+  {
+    "type": "]]",
     "named": false
   }
 ]
