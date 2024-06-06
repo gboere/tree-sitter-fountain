@@ -1,12 +1,11 @@
-(line) @spell
-(dialogue) @markup.quote
-(parenthetical) @markup.italic
-(transition) @label
-(character) @markup.heading.2
+(action) @action
+(dialogue_block) @dialogue
+(transition) @transition
+(character) @character
 
 [
  (section_heading)
  (scene_heading)
-] @markup.heading.1
+] @heading
 
-(note) @comment
+(note) @note
