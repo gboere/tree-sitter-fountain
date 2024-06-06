@@ -8,7 +8,7 @@
 <!-- [![crates][crates]](https://crates.io/crates/tree-sitter-fountain) -->
 <!-- [![pypi][pypi]](https://pypi.org/project/tree-sitter-fountain/) -->
 
-A tree-sitter parser for fountain files.
+A (rudimentary) tree-sitter parser for [.fountain](https://fountain.io/) files.
 
 ## References
 
