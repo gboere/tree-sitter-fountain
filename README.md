@@ -10,6 +10,32 @@
 
 A (rudimentary) tree-sitter parser for [.fountain](https://fountain.io/) files.
 
+## Installation
+You're probably already using `nvim-treesitter`. Open the file where you put its configs:
+```lua
+require'nvim-treesitter.configs'.setup {
+    -- ...
+}
+
+-- Add the following:
+local treesitter_parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+treesitter_parser_config.fountain = {
+    install_info = {
+        url = "https://github.com/gboere/tree-sitter-fountain",
+        files = {"src/parser.c"},
+        branch = "master",
+    },
+    filetype = "fountain",
+}
+vim.filetype.add ({
+    extension = {
+        fountain = 'fountain'
+    }
+})
+```
+
+After doing that, you'll need to download `queries/highlights.scm` from the repo and put it into `(NeoVim config folder)/after/queries/fountain/highlights.scm`. Or some other `runtime folder` as `(folder)/after/queries/highlights.scm`. See `:help rtp` for a list of all possible folders.
+
 ## References
 
 <!-- NOTE: add the grammar's references here -->
