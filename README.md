@@ -36,6 +36,11 @@ vim.filetype.add ({
 
 After doing that, you'll need to download `queries/highlights.scm` from the repo and put it into `(NeoVim config folder)/after/queries/fountain/highlights.scm`. Or some other `runtime folder` as `(folder)/after/queries/highlights.scm`. See `:help rtp` for a list of all possible folders.
 
+Then, run `:TSInstall fountain`.
+
+## Updating
+You'll need to fetch `queries/highlights.scm` manually. Then run `:TSUpdate fountain`.
+
 ## References
 
 <!-- NOTE: add the grammar's references here -->
