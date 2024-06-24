@@ -8,12 +8,22 @@ module.exports = grammar({
   ],
 
   rules: {
+    document: $ => seq(
+      optional($.title_page),
+      repeat($._element),
     ),
 
+    title_page: $ => repeat1(
+      $._title_element
     ),
 
+    _title_element: $ => choice(
+      /[\w ]+:[^:\n].*\n/,
+      /[\w ]+:(\n[ \t]{2,}.+)+/
     ),
 
+    action_block: $ => prec.right(
+      repeat1($._line)
     ),
 
       '\n'
@@ -26,6 +36,11 @@ module.exports = grammar({
 
 
 
+    _line: $ => /[^\n]+/,
 
+    _element: $ => choice(
+      $.action_block,
+      $.dialogue_block
+    )
   }
 });
