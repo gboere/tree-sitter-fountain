@@ -14,6 +14,9 @@ Contact:
     1588 Mission Dr.
     Solvang, CA 93463
 
+NARRATOR (O.S.)
+And ACTION
+
 Actions start and continue
 and continue
 
@@ -21,4 +24,8 @@ and continue
 
 (document
   (title_page)
-  (action_block))
+  (dialogue
+    (dialogue_block
+      (character)
+      (speech)))
+  (action))

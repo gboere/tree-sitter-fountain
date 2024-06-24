@@ -20,17 +20,17 @@ twas me
 ---
 
 (document
-  (dialogue_block
-    (dialogue
+  (dialogue
+    (dialogue_block
       (character)
       (speech))
-    (dialogue
+    (dialogue_block
       (character)
       (parenthetical)
       (speech)
       (speech)))
-  (action_block)
-  (dialogue_block
-    (dialogue
+  (action)
+  (dialogue
+    (dialogue_block
       (character)
       (speech))))
