@@ -1,0 +1,97 @@
+=====
+Comprehensive
+=====
+
+Title:
+	_**MY SCRIPT**_
+Credit: Written by
+Author: Me
+Source: Based on That Thing
+        by These Guys
+Draft date: 1997-01-31
+
+.PAGE. Location, Sublocation - NIGHT #1#
+
+= Introduces this or that concept.
+
+!**PANEL 1 - FULL ROW, NO BORDER**
+
+Abusing action text as panel headings, scene headings as page headings, turning this into a comic book script. The `!` above should not appear as action text, for it’s a forced-action marker character.
+
+SFX
+poof
+
+@McSFX
+poof
+again
+
+
+CHARACTER (V.O.)
+Stuff happened.
+
+> TO DOUBLE:
+
+===
+
+.PAGES①. Location, Sublocation - CONTINUOUS #2#
+
+Custom scene transition with `>`, explicit page break.
+
+> CONT:
+
+===
+
+>(CONTINUE)<
+.PAGES②. Location, Sublocation - CONTINUOUS #3#
+
+TO:
+
+===
+
+---
+(document
+  (title_element)
+  (title_element)
+  (title_element)
+  (title_element)
+  (title_element)
+  (scene
+    (scene_heading
+      (description)
+      (scene_tag))
+    (synope)
+    (action_block)
+    (action_block)
+    (dialogue
+      (character)
+      (line))
+    (dialogue
+      (character)
+      (line))
+    (dialogue
+      (character
+        (extension))
+      (line))
+    (transition)
+    (page_break)
+  )
+  (scene
+    (scene_heading
+      (description)
+      (scene_tag))
+    (action_block)
+    (transition)
+    (page_break)
+    (action_centered)
+  )
+  (scene
+    (scene_heading
+      (description)
+      (scene_tag))
+    (transition)
+    (page_break)
+  )
+
+
+
+)
