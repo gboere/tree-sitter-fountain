@@ -38,12 +38,12 @@
     }
   },
   "scripts": {
-    "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip",
-    "build": "tree-sitter generate --no-bindings",
-    "build-wasm": "tree-sitter build --wasm",
+    "build": "tree-sitter generate && node-gyp configure && node-gyp build",
+    "postbuild": "npm run test",
     "test": "tree-sitter test",
-    "parse": "tree-sitter parse"
+    "parse": "tree-sitter parse",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "tree-sitter": [
     {
