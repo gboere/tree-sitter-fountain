@@ -14,6 +14,8 @@ Contact:
     1588 Mission Dr.
     Solvang, CA 93463
 
+INT. A BLANK WORLD
+
 NARRATOR (O.S.)
 And ACTION
 
@@ -24,8 +26,9 @@ and continue
 
 (document
   (title_page)
-  (dialogue
-    (dialogue_block
-      (character)
-      (speech)))
-  (action))
+  (scene
+    (dialogue
+      (dialogue_block
+        (character)
+        (speech)))
+    (action)))

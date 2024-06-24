@@ -1,0 +1,68 @@
+=====
+Scenes and Transitions
+=====
+
+EST. Test?
+
+A pretty new england town
+
+FADE TO:
+
+EXT. test text
+
+Lots of cars are parked out front
+
+INT. Chapel - Day
+
+A wedding is occuring
+
+NARRATOR (o.s)
+I now pronounce you...
+
+SMASH TO:
+
+I/E. Chapel - Night
+
+The chapel walls are destroyed, desolate, and empty.
+Two lone coffins sit by the altair.
+
+===
+
+NARRATOR (o.s contd)
+... dead and deader
+
+> RAPID ZOOM
+
+.BINOCULAR POV
+
+!A DOZEN HANDS BURST OUT OF THE COFFINS
+
+
+> THE END <
+
+---
+
+(document
+  (scene
+    (action)
+    (transition))
+  (scene
+    (action))
+  (scene
+    (action)
+    (dialogue
+      (dialogue_block
+        (character)
+        (speech)))
+    (transition))
+  (scene
+    (action)
+    (break)
+    (dialogue
+      (dialogue_block
+        (character)
+        (speech)))
+    (transition))
+  (scene
+    (action))
+)

@@ -1,14 +1,14 @@
 =====
-Comprehensive
+COMP
 =====
-
 Title:
-	_**MY SCRIPT**_
+   _**MY SCRIPT**_
 Credit: Written by
 Author: Me
-Source: Based on That Thing
-        by These Guys
+Source: Based on
+  That Thing by These Guys
 Draft date: 1997-01-31
+
 
 .PAGE. Location, Sublocation - NIGHT #1#
 
@@ -29,9 +29,12 @@ again
 CHARACTER (V.O.)
 Stuff happened.
 
+/*
 > TO DOUBLE:
 
 ===
+*/
+
 
 .PAGES①. Location, Sublocation - CONTINUOUS #2#
 
@@ -44,54 +47,34 @@ Custom scene transition with `>`, explicit page break.
 >(CONTINUE)<
 .PAGES②. Location, Sublocation - CONTINUOUS #3#
 
-TO:
+BLAST TO:
 
 ===
 
 ---
+
 (document
-  (title_element)
-  (title_element)
-  (title_element)
-  (title_element)
-  (title_element)
+  (title_page)
   (scene
-    (scene_heading
-      (description)
-      (scene_tag))
     (synope)
-    (action_block)
-    (action_block)
+    (action)
     (dialogue
-      (character)
-      (line))
-    (dialogue
-      (character)
-      (line))
-    (dialogue
-      (character
-        (extension))
-      (line))
-    (transition)
-    (page_break)
-  )
+      (dialogue_block
+        (character)
+        (speech))
+      (dialogue_block
+        (character)
+        (speech)
+        (speech))
+      (dialogue_block
+        (character)
+        (speech))))
+  (boneyard)
   (scene
-    (scene_heading
-      (description)
-      (scene_tag))
-    (action_block)
+    (action)
     (transition)
-    (page_break)
-    (action_centered)
-  )
+    (break)
+    (action))
   (scene
-    (scene_heading
-      (description)
-      (scene_tag))
     (transition)
-    (page_break)
-  )
-
-
-
-)
+    (break)))

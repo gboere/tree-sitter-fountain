@@ -3,14 +3,11 @@
 
 module.exports = grammar({
   name: "fountain",
-  conflicts: $ => [
-    [$.dialogue]
-  ],
 
   rules: {
     document: $ => seq(
       optional($.title_page),
-      repeat($._element),
+      repeat(choice($.boneyard, $.section, $.scene, $._element)),
     ),
 
     // Title Page
@@ -18,15 +15,23 @@ module.exports = grammar({
       $._title_element
     ),
 
-    _title_element: $ => choice(
-      /[\w ]+:[^:\n].*\n/,
-      /[\w ]+:(\n[ \t]{2,}.+)+/
-    ),
+    _title_element: $ =>
+      /[\w ]+:.*((\n\t+|\n[ ]{2,}).*)*/,
+
+    // Scene
+
+    scene: $ => prec.right(seq(
+      choice(
+        /(INT|EXT|EST|INT.?\/EXT|I.?\/E).?.*\n\n/,
+        /\..+\n\n/
+      ),
+      repeat1($._element)
+    )),
 
     // Dialogue
-    dialogue: $ => repeat1(
+    dialogue: $ => prec.right(repeat1(
       $.dialogue_block
-    ),
+    )),
 
     dialogue_block: $ => (seq(
       field('character', $.character),
@@ -35,11 +40,7 @@ module.exports = grammar({
     )),
 
     character: $ => seq(
-      choice(
-        /[A-Z]+([ ]*\(.+\))?/,
-        /@[A-Za-z]+([ ]*\(.+\))?/,
-      ),
-      '\n'
+      /([A-Z. ]+|@.+)[ ]*(\(.+\))?\^?\n/,
     ),
 
     parenthetical: $ => prec(2, /\(.*\)\n/),
@@ -47,18 +48,46 @@ module.exports = grammar({
 
 
     // misc.
-    action: $ => prec.right(
-      repeat1($._line)
+    action: $ => prec(-1,
+      repeat1(choice(
+        /!.+/,
+        $._line
+      ))
     ),
 
-    _line_break: $ => /\n\n/,
+    transition: $ =>
+      choice(
+        /[A-Z ]+ TO:\n\n/,
+        />.+[^<]\n\n/
+      ),
+
+    break: $ => /={3,}\n/,
+
+    synope: $ => /=.+\n/,
+
+    section: $ => prec.left(seq(
+      /#{1,}.+\n/,
+      repeat(
+        choice($.scene, $._element)
+      )
+    )),
+
+    note: $ => /\[\[.+\]\]\n/,
+
+    boneyard: $ => prec(10,
+      /\/\*(.|\n)*\*\//
+    ),
 
     _line: $ => /[^\n]+/,
 
-    _element: $ => choice(
+    _element: $ => prec.left(choice(
       $.action,
-      $.dialogue
-    )
+      $.dialogue,
+      $.transition,
+      $.synope,
+      $.break,
+      $.note
+    ))
 
   }
 });
