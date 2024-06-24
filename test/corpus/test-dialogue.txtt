@@ -7,9 +7,8 @@ Hello children
 
 @McCRABWRANGLER (Through a gasmask)
 (fearful)
-Huh? Who said that?
-
-
+Huh?
+Who said that?
 
 the NARRATOR steps out from behind a bush
 It is wearing the skin of a crab
@@ -20,5 +19,18 @@ twas me
 
 ---
 
-(document)
-
+(document
+  (dialogue_block
+    (dialogue
+      (character)
+      (speech))
+    (dialogue
+      (character)
+      (parenthetical)
+      (speech)
+      (speech)))
+  (action_block)
+  (dialogue_block
+    (dialogue
+      (character)
+      (speech))))

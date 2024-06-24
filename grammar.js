@@ -26,15 +26,28 @@ module.exports = grammar({
       repeat1($._line)
     ),
 
+    character: $ => seq(
+      choice(
+        /[A-Z]+([ ]*\(.+\))?/,
+        /@[A-Za-z]+([ ]*\(.+\))?/,
+      ),
       '\n'
     ),
 
+    dialogue_block: $ => repeat1(
+      $.dialogue
     ),
 
-
+    dialogue: $ => (seq(
+      field('character', $.character),
+      repeat1(choice($.speech, $.parenthetical)),
       '\n'
+    )),
 
+    parenthetical: $ => prec(2, /\(.*\)\n/),
+    speech: $ => prec(1, /.*\n/),
 
+    _line_break: $ => /\n\n/,
 
     _line: $ => /[^\n]+/,
 
@@ -42,5 +55,6 @@ module.exports = grammar({
       $.action_block,
       $.dialogue_block
     )
+
   }
 });
