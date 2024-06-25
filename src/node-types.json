@@ -2,25 +2,15 @@
   {
     "type": "action",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "line",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
-    "type": "character",
+    "type": "boneyard",
     "named": true,
     "fields": {}
   },
   {
-    "type": "description",
+    "type": "character",
     "named": true,
     "fields": {}
   },
@@ -29,11 +19,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "line",
+          "type": "dialogue_block",
           "named": true
         }
       ]
@@ -42,21 +32,28 @@
   {
     "type": "dialogue_block",
     "named": true,
-    "fields": {},
+    "fields": {
+      "character": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "character",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "character",
-          "named": true
-        },
-        {
-          "type": "dialogue",
-          "named": true
-        },
-        {
           "type": "parenthetical",
+          "named": true
+        },
+        {
+          "type": "speech",
           "named": true
         }
       ]
@@ -75,7 +72,15 @@
           "named": true
         },
         {
-          "type": "dialogue_block",
+          "type": "boneyard",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "dialogue",
           "named": true
         },
         {
@@ -83,11 +88,19 @@
           "named": true
         },
         {
-          "type": "scene_heading",
+          "type": "scene",
           "named": true
         },
         {
-          "type": "section_heading",
+          "type": "section",
+          "named": true
+        },
+        {
+          "type": "synope",
+          "named": true
+        },
+        {
+          "type": "title_page",
           "named": true
         },
         {
@@ -98,52 +111,91 @@
     }
   },
   {
-    "type": "line",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "note",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "parenthetical",
     "named": true,
     "fields": {}
   },
   {
-    "type": "scene_heading",
+    "type": "scene",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
-          "type": "description",
+          "type": "action",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "dialogue",
+          "named": true
+        },
+        {
+          "type": "note",
+          "named": true
+        },
+        {
+          "type": "synope",
+          "named": true
+        },
+        {
+          "type": "transition",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "section_heading",
+    "type": "section",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "description",
+          "type": "action",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "dialogue",
+          "named": true
+        },
+        {
+          "type": "note",
+          "named": true
+        },
+        {
+          "type": "scene",
+          "named": true
+        },
+        {
+          "type": "synope",
+          "named": true
+        },
+        {
+          "type": "transition",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "transition",
+    "type": "speech",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "title_page",
     "named": true,
     "fields": {}
   },
@@ -152,39 +204,19 @@
     "named": false
   },
   {
-    "type": "#",
-    "named": false
+    "type": "break",
+    "named": true
   },
   {
-    "type": "(",
-    "named": false
+    "type": "note",
+    "named": true
   },
   {
-    "type": ")",
-    "named": false
+    "type": "synope",
+    "named": true
   },
   {
-    "type": "EST.",
-    "named": false
-  },
-  {
-    "type": "EXT.",
-    "named": false
-  },
-  {
-    "type": "INT.",
-    "named": false
-  },
-  {
-    "type": "INT./EXT.",
-    "named": false
-  },
-  {
-    "type": "[[",
-    "named": false
-  },
-  {
-    "type": "]]",
-    "named": false
+    "type": "transition",
+    "named": true
   }
 ]
