@@ -47,8 +47,9 @@
   },
   "tree-sitter": [
     {
+      "file-types": ["fountain"],
       "scope": "source.fountain",
-      "highlights": "queries/highlights.scm",
+      "highlights": "./queries/highlights.scm",
       "injection-regex": "^fountain$"
     }
   ]

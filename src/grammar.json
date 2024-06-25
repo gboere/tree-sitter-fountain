@@ -172,20 +172,17 @@
       }
     },
     "transition": {
-      "type": "TOKEN",
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "PATTERN",
-            "value": "[A-Z ]+ TO:\\n\\n"
-          },
-          {
-            "type": "PATTERN",
-            "value": ">.+[^<]\\n\\n"
-          }
-        ]
-      }
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "[A-Z ]+ TO:\\n\\n"
+        },
+        {
+          "type": "PATTERN",
+          "value": ">.+[^<]\\n\\n"
+        }
+      ]
     },
     "break": {
       "type": "PATTERN",

@@ -200,6 +200,11 @@
     "fields": {}
   },
   {
+    "type": "transition",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "\n",
     "named": false
   },
@@ -213,10 +218,6 @@
   },
   {
     "type": "synope",
-    "named": true
-  },
-  {
-    "type": "transition",
     "named": true
   }
 ]

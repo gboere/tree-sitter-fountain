@@ -5,7 +5,6 @@ LANGUAGE_NAME := tree-sitter-fountain
 # repository
 SRC_DIR := src
 
-PARSER_URL := https://github.com/gboere/tree-sitter-fountain
 PARSER_REPO_URL := $(shell git -C $(SRC_DIR) remote get-url origin 2>/dev/null)
 
 ifeq ($(PARSER_URL),)
