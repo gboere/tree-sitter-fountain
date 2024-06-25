@@ -1,0 +1,36 @@
+=====
+Dialogue Test
+=====
+
+NARRATOR (O.S)
+Hello children
+
+@McCRABWRANGLER (Through a gasmask)
+(fearful)
+Huh?
+Who said that?
+
+the NARRATOR steps out from behind a bush
+It is wearing the skin of a crab
+
+NARRATOR
+twas me
+
+
+---
+
+(document
+  (dialogue
+    (dialogue_block
+      (character)
+      (speech))
+    (dialogue_block
+      (character)
+      (parenthetical)
+      (speech)
+      (speech)))
+  (action)
+  (dialogue
+    (dialogue_block
+      (character)
+      (speech))))

@@ -7,9 +7,6 @@ name = "tree-sitter-fountain"
 description = "Fountain grammar for tree-sitter"
 version = "0.0.1"
 keywords = ["incremental", "parsing", "tree-sitter", "fountain"]
-authors = [
-  {name = "gboere"}
-]
 classifiers = [
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
@@ -22,7 +19,7 @@ license.text = "MIT"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/gboere/tree-sitter-fountain"
+Homepage = "https://github.com/tree-sitter/tree-sitter-fountain"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.21"]

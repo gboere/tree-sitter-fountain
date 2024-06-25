@@ -1,15 +1,23 @@
+(title_page) @comment.documentation
+
 [
  (action)
- (dialogue)
+ (speech)
 ] @spell
-(parenthetical) @markup.italic
 
-(character) @markup.heading.2
-(transition) @keyword
+(character)@keyword
+(parenthetical)@markup.italic
+
+(transition)@comment.todo
+
+(break)@type
+
+(section) @markup.heading.1
+(scene) @markup.heading.2
+(synope) @markup.heading.3
 
 [
- (section_heading)
- (scene_heading)
-] @markup.heading.1
+ (note)
+ (boneyard)
+] @comment
 
-(note) @comment
